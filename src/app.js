@@ -23,12 +23,13 @@ app.use('/api/v1/gallery', galleryRoute);
 app.use('/api/v1/advertisement', advertisementRouter);
 
 app.get('/',(req,res)=>{
-  res.send("Welcome to Organization's API")
-})
+  res.send("Welcome to Organization's API");
+});
+
 app.use((req, res, next) => {
   res.status(404).json({
     status: 'error',
-    message: 'Opps Resource not found',
+    message: 'Opps Resource not found here',
   });
 });
 
