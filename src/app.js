@@ -22,6 +22,9 @@ app.use('/api/v1/aboutus', AboutUsRoute);
 app.use('/api/v1/gallery', galleryRoute);
 app.use('/api/v1/advertisement', advertisementRouter);
 
+app.get('/',(req,res)=>{
+  res.send("Welcome to Organization's API")
+})
 app.use((req, res, next) => {
   res.status(404).json({
     status: 'error',
