@@ -6,7 +6,7 @@ dotenv.config();
 const connection = mysql.createConnection({
   host: "bud5jisgxhg7maqm3uog-mysql.services.clever-cloud.com",
   user: "ucazaarbbmw0axy5",
-  password: "C3QzjRfHSx7oKQOGd9ko",
+  password: "jNjjoXHunmMsX3xw6sTt",
   database: "bud5jisgxhg7maqm3uog"
   
   // host: process.env.Host,
