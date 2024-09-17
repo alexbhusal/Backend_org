@@ -25,7 +25,7 @@ app.use('/api/v1/advertisement', advertisementRouter);
 app.use((req, res, next) => {
   res.status(404).json({
     status: 'error',
-    message: 'Resource not found',
+    message: 'Opps Resource not found',
   });
 });
 
