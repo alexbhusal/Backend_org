@@ -6,6 +6,8 @@ const {
 const ProtectRoute = require('../Middleware/ProtectRoute');
 
 router.route('/all').get(getAllNotices);
-router.route('/publish').post(ProtectRoute, publishNotice);
+router.route('/publish').post(
+  // ProtectRoute, 
+  publishNotice);
 
 module.exports = router;
