@@ -9,7 +9,7 @@ const ProtectRoute = require('../Middleware/ProtectRoute');
 router.get('/all', getAllAdvertisement);
 router.post(
   '/register',
-  ProtectRoute,
+  // ProtectRoute,
   multerUpload.single('advertisement_picture'),
   registerAdvertisement
 );
