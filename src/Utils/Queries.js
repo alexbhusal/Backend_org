@@ -8,7 +8,7 @@ const connection = require('./Db');
 
 async function createMember(payload) {
   return new Promise((resolve, reject) => {
-    const query = `INSERT INTO Members (name, designation, contact, facebook, tenure_year, frontpage_status, picture_id) VALUES (?, ?, ?, ?, ?, ?, ?)`;
+    const query = `INSERT INTO Members (name, designation, contact, facebook, tenure_year, frontpage_status,email, picture_id) VALUES (?, ?,?, ?, ?, ?, ?, ?)`;
     const values = [
       payload.name,
       payload.designation,
@@ -17,6 +17,7 @@ async function createMember(payload) {
       payload.tenure_year,
       payload.frontpage_status,
       payload.picture_id,
+      payload.email,
     ];
 
     connection.query(query, values, (error, results) => {
