@@ -190,18 +190,18 @@ async function getAllAdvertisement() {
 
 async function registerAboutUs(payload) {
   return new Promise((resolve, reject) => {
-    // first hide all the previous data
-    const hideQuery = `UPDATE about_us SET is_active = false`;
-    connection.query(hideQuery, (err, results) => {
+    // first delete all the previous data
+    const deleteQuery = `DELETE FROM about_us`;
+    connection.query(deleteQuery, (err, results) => {
       if (err) return reject(err);
+    });
 
-      // then insert the new data
-      const query = `INSERT INTO about_us (name, description, is_active) VALUES (?, ?, true)`;
-      const values = [payload.name, payload.description];
-      connection.query(query, values, (err, results) => {
-        if (err) return reject(err);
-        resolve(results);
-      });
+    // then insert the new data
+    const query = `INSERT INTO about_us (name, description) VALUES (?, ?)`;
+    const values = [payload.name, payload.description];
+    connection.query(query, values, (err, results) => {
+      if (err) return reject(err);
+      resolve(results);
     });
   });
 }
