@@ -9,7 +9,7 @@ const ProtectRoute = require('../Middleware/ProtectRoute');
 router
   .route('/register')
   .post(
-    ProtectRoute,
+    // ProtectRoute,
     MulterUpload.array('gallery_picture', 10),
     registerGallery
   );
