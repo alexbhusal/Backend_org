@@ -39,6 +39,7 @@ async function getAllMembers() {
         Members.contact,
         Members.facebook,
         Members.tenure_year,
+        Members.email,
         Members.frontpage_status,
         Pictures.picture_link
     FROM Members
