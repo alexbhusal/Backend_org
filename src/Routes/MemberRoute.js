@@ -7,7 +7,7 @@ router.get('/', MemberController.getAllMembers);
 router
   .route('/create')
   .post(
-    protectRoute,
+    //protectRoute,
     MulterUpload.array('profile_picture', 1),
     MemberController.createMember
   );
