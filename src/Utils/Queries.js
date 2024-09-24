@@ -191,10 +191,10 @@ async function getAllAdvertisement() {
 async function registerAboutUs(payload) {
   return new Promise((resolve, reject) => {
     // first delete all the previous data
-    const deleteQuery = `DELETE FROM about_us`;
-    connection.query(deleteQuery, (err, results) => {
-      if (err) return reject(err);
-    });
+    // const deleteQuery = `DELETE FROM about_us`;
+    // connection.query(deleteQuery, (err, results) => {
+    //   if (err) return reject(err);
+    // });
 
     // then insert the new data
     const query = `INSERT INTO about_us (name, description) VALUES (?, ?)`;
